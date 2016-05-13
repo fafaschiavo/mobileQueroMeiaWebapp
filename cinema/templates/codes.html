@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>QueroMeia</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	
+	<!-- Included Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
+	
+	<!-- CSS Files comes here -->
+	<link rel="shortcut icon" type="image/png" href="https://s3-sa-east-1.amazonaws.com/elements-queromeia/logo/icon.png"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/grid12.css" rel="stylesheet" media="screen">                              	 <!-- Grid System -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/james_typography.css" rel="stylesheet" media="screen">                       <!-- James Framework - TYPOGRAPHY -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/main.css" rel="stylesheet" media="screen">                                   <!-- Main CSS file -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/color_scheme_dark.css" rel="stylesheet" media="screen">                      <!-- Color scheme (dark/light)-->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/colors/color_palette_lime.css" rel="stylesheet" media="screen">              <!-- Color palette -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/rapid-icons.css" rel="stylesheet" media="screen">                            <!-- James Framework - ICONS -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/js_styles/jquery.maximage.min.css" rel="stylesheet" media="screen">          <!-- MaxImage background image slideshow -->
+	<link href="https://s3-sa-east-1.amazonaws.com/queromeia/responsivity.css" rel="stylesheet" media="screen">                           <!-- Responsive Fixes -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+	<!-- Modernizer and IE specyfic files -->  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<style type="text/css">
+		.spinner {
+		  width: 40px;
+		  height: 40px;
+		  background-color: #221d1f;
+
+		  margin: 12px auto;
+		  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+		  animation: sk-rotateplane 1.2s infinite ease-in-out;
+		}
+
+		@-webkit-keyframes sk-rotateplane {
+		  0% { -webkit-transform: perspective(120px) }
+		  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+		  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+		}
+
+		@keyframes sk-rotateplane {
+		  0% { 
+		    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+		  } 50% { 
+		    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+		  } 100% { 
+		    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		  }
+		}
+		.hero_fullscreen.background_solid{
+			background-color: #FFF;
+			padding-top: 0.2rem;
+		}
+		.btn, .btn-large {
+		    background-color:#eec92c;
+		}
+		a{
+			color: #eec92c;
+		}
+		#main_content {
+		    display: table;
+		    overflow: hidden;
+		    height: 50%;
+		    margin-top: 4%;
+		}
+		.rotate-ticket{
+			-ms-transform: rotate(-10deg); /* IE 9 */
+		    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-10deg);
+		}
+		.btn, .btn-large, .btn-flat{
+			margin-bottom: 0px;
+		}
+		.button-container{
+			text-align: center;
+		}
+		.number-box{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    border-right-width: 0px;
+		    text-align: center;
+		    background-color: #eec92c;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: right;
+		}
+		.number-box-2{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    border-right-width: 0px;
+		    text-align: center;
+		    background-color: #eec92c;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: right;
+		}
+		.number-box-3{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    border-right-width: 0px;
+		    text-align: center;
+		    background-color: #eec92c;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: right;
+		}
+		.product-number-box{
+			border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    border-right-width: 0px;
+		    text-align: center;
+		    background-color: #eec92c;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: right;
+		}
+		.product-text-box{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.product-description{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.number{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 800;
+			font-size: 3em;
+		}
+		.product-number{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 800;
+			font-size: 2.3em;
+		}
+		.text{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 400;
+			font-size: 93%;
+		}
+		.text-spacer{
+			height: 25%;
+		}
+		.cell-special .mdl-cell{
+			margin: 0px;
+		}
+		.mdl-cell{
+			margin: 0px;
+		}
+		.spacer{
+			height: 39%;
+		}
+		.product-spacer-type{
+			height: 35%;
+		}
+		.header-properties{
+			background-color: #fff; 
+			-webkit-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+		}
+		.logo{
+			height: 80px;
+		}
+		.hero_fullscreen.background_solid{
+			padding-top: 0px;
+		}
+		.header-link{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 400;
+			font-size: 0.7rem;
+			padding: 3px;
+			padding-bottom: 0px;
+		}
+		.header-link-menu{
+			text-align: center;
+		}
+		.header-line-menu{
+			border-bottom: 2px solid;
+    		border-bottom-color: #eec92c;
+    		border-bottom-left-radius: 0px;
+    		border-bottom-right-radius: 0px;
+    		width: 88%;
+			margin: auto;
+		}
+		.spacer-header-menu{
+			height: 2.4em;
+		}
+		.buy-buttom{
+			box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.18), 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+		}
+		.rotate-ticket{
+			-ms-transform: rotate(-10deg); /* IE 9 */
+		    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-10deg);
+		}
+		.product-container{
+			text-align: center;
+		}
+		.title-box{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #eec92c;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    float: none;
+		    margin: auto;
+		    width: 100%;
+		    height: 60px;
+		}
+		.title-font{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 800;
+			font-size: font-size: 170%;;
+		}
+		.instructions-box{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    border-top-width: 0px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.text-instructions{
+			color: #221d1f;
+			font-family: 'Roboto','Helvetica','Arial',sans-serif;
+			font-weight: 600;
+			font-size: 130%;
+		}
+		.code-spacer{
+			height: 14px;
+		}
+		.instructions-spacer{
+			height: 30px;
+		}
+		.text-box{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.text-box-2{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.text-box-3{
+		    border-style: solid;
+		    border-color: #221d1f;
+		    border-width: 5px;
+		    text-align: center;
+		    background-color: #f3f3f3;
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    width: 100%;
+		    float: left;
+		    padding: 5px;
+		}
+		.product-spacer{
+			height: 10px;
+		}
+		.buy-butom-paypal{
+			box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.18), 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+		    border-radius: 1px;
+		}
+		.error-spacer{
+			height: 50px;
+		}
+		.social-icon{
+			width: 30px;
+			border-radius: 6px;
+		}
+		.input-label{
+			border-bottom: 1px solid;
+			border-color: #58595B;
+		}
+		.active{
+			color: #eec92c !important;
+		}
+		.mdl-textfield{
+			width: 90%;
+		}
+		.mdl-textfield__label::after{
+			background-color: #eec92c;
+		}
+		@-moz-document url-prefix(){
+			#main_content{
+				margin-top: 2rem;
+			}
+			.mockup img{
+				width: 26rem;
+				margin-top: 5rem;
+				right: 7rem;
+			}
+		}
+		.mdl-layout-title{
+			width: 84%;
+			text-align: center;
+		}
+		.material-icons{
+			color: #221d1f;
+		}
+		.mobile-header-spacer{
+			height: 18%;
+		}
+		.mdl-grid{
+			padding: 0px;
+		}
+		.block-margin{
+			margin-bottom: 8%;
+		}
+		.mdl-layout__header{
+			margin-bottom: 5%;
+			background-color: #fff;
+		}
+	</style>
+  </head>
+
+  <script type="text/javascript">
+	if (screen.width > 699) {
+		url = window.location.protocol + '//queromeia.com';
+		window.location.replace(url);
+	}
+</script>
+  
+  <body>
+	<div id="preloader_container">
+	    
+	    <!-- Preloader Screen -->
+		<header class="preloader_header">	 
+	        <div class="preloader_loader">
+	            <svg class="preloader_inner" width="60px" height="60px" viewBox="0 0 80 80">
+	                <path class="preloader_loader_circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	                <path id="preloader_loader_circle" class="preloader_loader_circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	            </svg>
+	        </div>
+	    </header>
+	    <!-- //Preloader Screen -->
+	
+	
+		<!-- Fullscreen homepage -->
+		<section class="hero_fullscreen newsletter timer mockups background_solid" style="background: url('https://s3-sa-east-1.amazonaws.com/elements-queromeia/background/background-v3.png') center 30% no-repeat; background-size: cover;"><!-- You can edit classes of this section to control the content that i displayed and backgrounds of this section, more info in documentation. -->
+			
+			<!-- Always shows a header, even in smaller screens. -->
+			<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			  <header class="mdl-layout__header">
+			    <div class="mdl-layout__header-row">
+			      <!-- Title -->
+			      <div class="mdl-layout-title">
+			      	<a href="/"><img style="margin-top: 1%; height: 47px; float: none;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/logo/logo-line.png" alt="logo" class="logo"/></a>
+			      </div>
+			      <!-- Add spacer, to align navigation to the right -->
+			      <div class="mdl-layout-spacer"></div>
+			      <!-- Navigation. We hide it in small screens. -->
+			      <nav class="mdl-navigation mdl-layout--large-screen-only">
+				      <a class="mdl-navigation__link" href="/">Comprar</a>
+				      <a class="mdl-navigation__link" href="/my-codes/">Esqueceu seu código?</a>
+				      <a class="mdl-navigation__link" href="/how-it-works/">Como funciona</a>
+			      </nav>
+			    </div>
+			  </header>
+			  <div class="mdl-layout__drawer">
+			    <span class="mdl-layout-title">
+			    	<a href="{% url 'index' %}"><img style="margin-top: 1%; height: 47px; float: none;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/logo/logo-line.png" alt="logo" class="logo"/></a>
+			    </span>
+			    <nav class="mdl-navigation">
+			      <a class="mdl-navigation__link" href="/">Comprar</a>
+			      <a class="mdl-navigation__link" href="/my-codes/">Esqueceu seu código?</a>
+			      <a class="mdl-navigation__link" href="/how-it-works/">Como funciona</a>
+			    </nav>
+			  </div>
+
+			  <main class="mdl-layout__content">
+			    <div class="page-content">
+
+					<div class="container align-left" id="main_content" style="padding-left: 6px;">
+						<div class="content_container row" style="width: 100%">
+						
+							<div style="background-repeat: no-repeat;">
+							</div>
+
+							<div class="mdl-grid" style="margin-top: 1.5rem;">
+
+								<div class="title-box">
+									<div class="code-spacer"></div>
+									<div class="title-font">
+										Esqueceu seu código?
+									</div>
+								</div>
+								<div class="instructions-box">
+									<div class="instructions-spacer"></div>
+									<div class="text">
+										<div class="text-instructions">Não tem problema!</div>
+										<br><br>
+										<div class="text" style="font-size: 16px;">1 -Digite o e-mail utilizado na sua conta PayPal na caixa abaixo.</div>
+										<br>
+										<div class="text" style="font-size: 16px;">2 -Você receberá uma mensagem com seu ultimo voucher promocional.</div>
+										<br>
+										<div>
+											<form  action="/my-codes-get/" id="codes-form" method="post">
+											  {% csrf_token %}
+											  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+											    <input class="mdl-textfield__input input-label" type="email" id="email-form" name="email-form" style="border-bottom: 1px solid; border-color: #9e9e9e; margin: 0px;">
+											    <label class="mdl-textfield__label" for="email-form">Email Paypal...</label>
+											  </div>
+											  <div>
+											  	<button class="btn waves-effect waves-light" type="submit" name="action" style="color: #221d1f; margin-bottom: 15px;">Enviar</button>
+											  </div>
+											</form>
+										</div>
+									</div>
+								</div>
+
+						</div>		
+					</div> 
+
+			    </div>
+			  </main>
+			
+		</section><!-- //Homepage -->
+		
+		<!-- More info -->
+		<section id="more_info">
+			<div class="container">
+			<!-- Social Icons -->
+			<div class="container">
+				<div class="social_icons_container align-left">
+				  	<div class="social_icons" style="margin-top: 5%;">
+		                <ul>
+		                    <li>
+		                    	<a href="#">
+		                    		<img src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/icon+(1).svg" class="social-icon">
+		                    	</a>
+		                    </li>
+		                    <li>
+		                    	<a href="#">
+		                    		<img src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/social-network.svg"  class="social-icon">
+		                    	</a>
+		                    </li>
+		                </ul>
+				    </div>
+			    </div>
+			</div>
+
+			<!-- //Social Icons -->
+				<div class="row">
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+					<h3>Como funciona?</h3>
+					<p>Você compra seu voucher no QueroMeia.com. Esse voucher vale como uma entrada inteira (não de estudante) no site Ingresso.com para qualquer unidade da rede Cinemark.</p>
+					<p>Os vouchers QueroMeia.com são válidos para qualquer pessoa, seja estudante ou não, e custam <span style="font-weight: 800;">o mesmo que uma meia entrada !</span></p>
+					
+					<ul class="icon_list">
+						<li><img src="http://cl.ly/460q121K1W3d/money%20(1).svg" class="icon_small float-left" style="width: 60px; margin: 2px; margin-right: 15px;">
+							<h6>Cartão de crédito MasterCard</h6>
+						</li>
+						<li><img src="http://cl.ly/3a191A3N3c0A/symbols.svg" class="icon_small float-left" style="width: 60px; margin: 2px; margin-right: 15px;">
+							<h6>Cartão de crédito Visa</h6>
+						</li>
+						<li><img src="http://cl.ly/1C1g0V0T1V0f/money%20(2).svg" class="icon_small float-left" style="width: 60px; margin: 2px; margin-right: 15px;">
+							<h6>Pagamento via PayPal</h6>
+						</li>
+					</ul>
+					
+					<p>Compre seus ingressos com Paypal, a melhor e mais segura ferramenta de pagamento online do mundo!</p>	
+					</div>
+					
+					<!-- Contact Form Section -->
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+						<h3>Entre em contato</h3>
+						<p>Você pode utilizar o formulário abaixo ou nos contactar via e-mail em: <a href="#">atendimento@queromeia.com</a></p>
+					
+					
+						<!-- Contact Form -->
+						<form action="/contact-form/" id="contact-form" method="post">
+							{% csrf_token %}
+							<div class="contact_form">
+								<div class="input-field">
+					  				<input id="first_name" type="text" name="contact-name">
+					  				<label for="first_name">Nome</label>
+					  			</div>
+					  			<div class="input-field">
+					  				<input id="contact_email" type="email" name="contact-email">
+					  				<label for="contact_email">E-mail</label>
+					  			</div>
+					  			<div class="input-field">
+						  			<textarea class="materialize-textarea" name="contact-message"></textarea>
+						  			<label>Mensagem</label>
+						  		</div>
+				  			</div>	
+				  			<button class="btn waves-effect waves-light" type="submit" name="action" id="contact-form-button">Enviar</button>
+						</form>
+						<!-- //Contact Form -->
+					
+					
+						<div id="message"><div id="alert"></div></div><!-- Message container --> 
+					</div>
+					<!-- //Contact Form Section -->
+					
+
+				</div>				
+			</div>
+		</section><!-- //More info -->
+
+	
+	</div><!-- //preloader -->
+
+   
+	<!-- JavaScript plugins comes here -->	
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery-2.1.3.min.js"></script>        <!-- jQuery -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery.easing.min.js"></script>       <!-- jQuery easing -->    
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery.scrollTo.js"></script>         <!-- Scroll to -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery.cycle.all.min.js"></script>    <!-- jQuery cycle -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery.form.js"></script>    		  <!-- jQuery form -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/jquery.maximage.min.js"></script>     <!-- MaxImage background image slideshow -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/materialize.js"></script>     		  <!-- Materialize -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/classie.js"></script>                 <!-- Class helper function -->
+	<script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/pathLoader.js"></script>              <!-- Preloader Loading Animation -->
+	<script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/preloader.js"></script>               <!-- Preloader -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/count_down.js"></script>              <!-- Count Down Timer -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/happy.js"></script>                   <!-- Newsletter form validation -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/happy.methods.js"></script>           <!-- Newsletter form validation -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/retina.js"></script>                  <!-- Retina.js - support for HiDPI Displays -->
+    <script src="https://s3-sa-east-1.amazonaws.com/queromeia/js/main.js"></script>                    <!-- Main Js file -->
+    
+    
+    <!-- Show message after newsletter form submit -->
+	<script type="text/javascript">
+
+    $('document').ready(function()
+        {
+        $('#subscribe-form').ajaxForm( {
+            target: '#preview',
+            success: function() {       
+                  $('#preview').addClass( "show_message" );
+                }
+            });
+        });
+
+	function enable_buttom() {
+		$(".buy-buttom").css("z-index", "1000");
+		$("#cta-button").fadeTo(200, 1);
+	};
+	setTimeout(enable_buttom, 4500);
+
+	$("#contact-form-button").click(function(){
+		var button = this;
+		button.disabled = true;
+		$("#contact-form-button").text("Sucesso");
+	});
+
+    </script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-76869824-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+    
+  </body>
+</html>
