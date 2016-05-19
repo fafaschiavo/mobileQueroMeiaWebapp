@@ -248,15 +248,9 @@ def desktop_only(request):
 @csrf_exempt
 def show_me_the_money(sender, **kwargs):
     ipn_obj = sender
-    print 'flag1'
     if ipn_obj.payment_status == ST_PP_COMPLETED:
-    	print 'flag2'
-    	print 'status' + ipn_obj.payment_status
-    	print 'hash_id' + ipn_obj.custom
-    	print 'amount' + str(ipn_obj.mc_gross)
     	order = orders.objects.get(hash_id = ipn_obj.custom)
     	if order.hash_id == ipn_obj.custom and order.amount <= ipn_obj.mc_gross and settings.EMAIL_PAYPAL_ACCOUNT == ipn_obj.receiver_email:
-    		print 'flag3'
     		try:
     			member_exist = members.objects.get(email = ipn_obj.payer_email)
     			member_id = member_exist.id
@@ -264,7 +258,6 @@ def show_me_the_money(sender, **kwargs):
     			member_id = create_new_member(ipn_obj)
     		update_order_success_payment(ipn_obj, member_id)
     		try:
-    			print 'flag4'
     			code = consume_ticket_code(order.hash_id)
     			mandrill_success(ipn_obj.payer_email, code)
     		except:
@@ -292,7 +285,7 @@ def show_me_the_money(sender, **kwargs):
 
 @csrf_exempt
 def show_me_the_money_invalid(sender, **kwargs):
-    return None
+	return None
 
 def contact_form(request):
 	context = {}
