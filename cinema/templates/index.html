@@ -444,7 +444,7 @@
 								
 									<div style="background-repeat: no-repeat;">
 
-										<div class="mdl-grid block-margin">
+										<div class="mdl-grid block-margin input-container" id="1">
 											<div class="mdl-cell mdl-cell--4-col-phone product-description-box" style="width: 89%;">
 												<div class="product-number-box">
 													<span class="product-number">
@@ -476,34 +476,47 @@
 											  			<span style="font-size: 100%; font-weight: 900; color: #cc2127">R$16,00 </span>
 											  			<span style="font-size: 60%; font-weight: 400;">+ 5,00 (Operação)</span>
 											  		</div>
-													
-													<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-														<input type="hidden" name="cmd" value="_xclick">
-														<input type="hidden" name="business" value="{{email_receiver}}">
-														<input type="hidden" name="lc" value="BR">
-														<input type="hidden" name="item_name" value="Ingresso - QueroMeia Red">
-														<input type="hidden" name="item_number" value="1">
-														<input type="hidden" name="amount" value="{{value}}">
-														<input type="hidden" name="currency_code" value="BRL">
-														<input type="hidden" name="button_subtype" value="products">
-														<input type="hidden" name="no_note" value="0">
-														<input type="hidden" name="tax_rate" value="0.000">
-														<input type="hidden" name="shipping" value="0.00">
-														<input type="hidden" name="add" value="1">
-														<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
-														<input type="hidden" name="notify_url" value="notify_url">
-														<input type="hidden" name="return" value="{{hash_id}}">
-														<input type="hidden" name="custom" value="{{hash_id}}">
-														<input class="buy-butom-paypal" type="image" style="width: 85%; font-size: 22px; z-index: 1000; margin-bottom: 4%; margin-top: 4%;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/comprar-buttom.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-														<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-													</form>
+											  		<div>
+														<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+															<input type="hidden" name="cmd" value="_xclick">
+															<input type="hidden" name="business" value="{{email_receiver}}">
+															<input type="hidden" name="lc" value="BR">
+															<input type="hidden" name="item_name" value="Ingresso - QueroMeia Red">
+															<input type="hidden" name="item_number" value="1">
+															<input type="hidden" name="amount" value="{{value}}">
+															<input type="hidden" name="currency_code" value="BRL">
+															<input type="hidden" name="button_subtype" value="products">
+															<input type="hidden" name="no_note" value="0">
+															<input type="hidden" name="tax_rate" value="0.000">
+															<input type="hidden" name="shipping" value="0.00">
+															<input type="hidden" name="add" value="1">
+															<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+															<input type="hidden" name="notify_url" value="notify_url">
+															<input type="hidden" name="return" value="{{hash_id}}">
+															<input type="hidden" name="custom" value="{{hash_id}}">
+															<input class="buy-butom-paypal" type="image" style="width: 85%; font-size: 22px; z-index: 1000; margin-bottom: 4%; margin-top: 4%;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/comprar-buttom.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+															<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+														</form>
+												  		<div>
+													  		<span style="color: black;">Quantidade</span>
+													  	</div>
+													    <span class="select-wrap" style="color: black" id="{{hash_id}}">
+													        <select name="" id="" class="select-box">
+													          <option value="1">1</option>
+													          <option value="2">2</option>
+													          <option value="3">3</option>
+													          <option value="4">4</option>
+													          <option value="5">5</option>
+													        </select>
+													    </span>
+													</div>
 													<div class="spinner" style="display: none"></div>
 												</div>
 
 											</div>
 										</div>
 
-										<div class="mdl-grid block-margin">
+										<div class="mdl-grid block-margin input-container" id="2">
 											<div class="mdl-cell mdl-cell--4-col-phone product-description-box" style="width: 89%;">
 												<div class="product-number-box">
 													<span class="product-number">
@@ -536,26 +549,40 @@
 											  			<span style="font-size: 60%; font-weight: 400;">+ 5,00 (Operação)</span>
 											  		</div>
 													<br>
-													<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-														<input type="hidden" name="cmd" value="_xclick">
-														<input type="hidden" name="business" value="{{email_receiver}}">
-														<input type="hidden" name="lc" value="BR">
-														<input type="hidden" name="item_name" value="Ingresso - QueroMeia Gold">
-														<input type="hidden" name="item_number" value="1">
-														<input type="hidden" name="amount" value="{{value2}}">
-														<input type="hidden" name="currency_code" value="BRL">
-														<input type="hidden" name="button_subtype" value="products">
-														<input type="hidden" name="no_note" value="0">
-														<input type="hidden" name="tax_rate" value="0.000">
-														<input type="hidden" name="shipping" value="0.00">
-														<input type="hidden" name="add" value="1">
-														<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
-														<input type="hidden" name="notify_url" value="notify_url">
-														<input type="hidden" name="return" value="{{hash_id2}}">
-														<input type="hidden" name="custom" value="{{hash_id2}}">
-														<input class="buy-butom-paypal" type="image" style="width: 85%; font-size: 22px; z-index: 1000; margin-bottom: 4%; margin-top: 4%;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/comprar-buttom.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-														<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-													</form>
+													<div>
+														<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+															<input type="hidden" name="cmd" value="_xclick">
+															<input type="hidden" name="business" value="{{email_receiver}}">
+															<input type="hidden" name="lc" value="BR">
+															<input type="hidden" name="item_name" value="Ingresso - QueroMeia Gold">
+															<input type="hidden" name="item_number" value="1">
+															<input type="hidden" name="amount" value="{{value2}}">
+															<input type="hidden" name="currency_code" value="BRL">
+															<input type="hidden" name="button_subtype" value="products">
+															<input type="hidden" name="no_note" value="0">
+															<input type="hidden" name="tax_rate" value="0.000">
+															<input type="hidden" name="shipping" value="0.00">
+															<input type="hidden" name="add" value="1">
+															<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+															<input type="hidden" name="notify_url" value="notify_url">
+															<input type="hidden" name="return" value="{{hash_id2}}">
+															<input type="hidden" name="custom" value="{{hash_id2}}">
+															<input class="buy-butom-paypal" type="image" style="width: 85%; font-size: 22px; z-index: 1000; margin-bottom: 4%; margin-top: 4%;" src="https://s3-sa-east-1.amazonaws.com/elements-queromeia/comprar-buttom.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+															<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+														</form>
+												  		<div>
+													  		<span style="color: black;">Quantidade</span>
+													  	</div>
+													    <span class="select-wrap" style="color: black" id="{{hash_id2}}">
+													        <select name="" id="" class="select-box">
+													          <option value="1">1</option>
+													          <option value="2">2</option>
+													          <option value="3">3</option>
+													          <option value="4">4</option>
+													          <option value="5">5</option>
+													        </select>
+													    </span>
+													</div>
 													<div class="spinner" style="display: none"></div>
 												</div>
 
@@ -692,12 +719,14 @@
   	{% else %}
   	$("div #1").find(".buy-butom-paypal").attr("src", "https://s3-sa-east-1.amazonaws.com/elements-queromeia/unavailable-buttom.png");
   	$("div #1").find(".buy-butom-paypal").prop("disabled", true);
+  	$("div #1").find(".select-box").prop("disabled", true);
   	{% endif %}
 
   	{% if availability2 %}
   	{% else %}
   	$("div #2").find(".buy-butom-paypal").attr("src", "https://s3-sa-east-1.amazonaws.com/elements-queromeia/unavailable-buttom.png")
   	$("div #2").find(".buy-butom-paypal").prop("disabled", true);
+  	$("div #2").find(".select-box").prop("disabled", true);
   	{% endif %}
 
 	var notify_url_fields = jQuery( "[name='notify_url']" );
@@ -758,35 +787,11 @@
 	var url = window.location.host;
 	var protocol = window.location.protocol;
 	$("input").click(function() {
-		// text_box_width = $(".product-text-box").width();
-		// text_box_height = $(".product-text-box").height();
-		// number_box_width = $(".product-number-box").width();
-		// $(".product-text-box").width(text_box_width + 'px');
-		// $(".product-text-box").height(text_box_height + 'px');
-		// $(".product-number-box").width(number_box_width + 'px');
-		// $(".group-one").css("margin-left", "7px");
-		// $(".spinner").css("margin-top", "0px");
 		var element = $(this).closest("div");
-		console.log('trigger')
 		element.find("form").css("display", "none");
 		element.find(".spinner").css("display", "block");
 	});
 
-	// function change_content() {
-	// 	$('#home-content').css("display", "none");
-	// 	$('#buy-content').css("display", "inline");
-
-	// 	product_text_box_height = $(".product-text-box").closest(".mdl-cell").height();
-	// 	$(".product-number-box").closest(".mdl-cell").height(product_text_box_height + 'px');
-	// 	$(".product-number-box").height((product_text_box_height-10) + 'px');
-
-	// 	number_box_width = $(".product-number-box").closest(".mdl-cell").width();
-	// 	text_box_width = $(".product-text-box").closest(".mdl-cell").width();
-	// 	$(".product-description-box").width((number_box_width + text_box_width) + 'px');
-
-	// 	$('#buy-content').find('*').css("opacity", "0");
-	// 	$('#buy-content').find('*').animate({ opacity: 1 }, 300);
-	// };
 
 	function buy_content(){
 		$('#home-content').fadeTo(300, 0);
@@ -806,6 +811,33 @@
 		var button = this;
 		button.disabled = true;
 		$("#contact-form-button").text("Sucesso");
+	});
+
+	$( ".select-box").change(function() {
+		var element = $(this).closest(".text-box-2");
+		element.find(".input-container").css("display", "none");
+		element.find(".spinner").css("display", "inline");
+		var form_amount_input = $(this).closest('.input-container').find('[name="amount"]');
+		var quantity = $(this).closest('span').find(".select-box option:selected").text();
+		var order_hash_id = $(this).closest('span').attr('id');
+		$.ajax({
+	        url: '{% url 'edit_order_quantity' %}',
+	        data: { 
+		        "order_hash_id": order_hash_id,
+		        "quantity": quantity
+		    },
+	        type: 'post',
+	        success: function(data) {
+	        	console.log(data);
+	        	form_amount_input.attr('value', data);
+				element.find(".input-container").css("display", "");
+				element.find(".spinner").css("display", "none");
+	        },
+	        failure: function(data) {
+	            console.log('Got an error dude');
+	        }
+	    });
+
 	});
 
     </script>

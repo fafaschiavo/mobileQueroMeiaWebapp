@@ -115,6 +115,9 @@
 		    opacity: 0; 
 		  }
 		}
+		.hero_fullscreen{
+			height: 460px !important;
+		}
 		.hero_fullscreen.background_solid{
 			background-color: #FFF;
 			padding-top: 0.2rem;
@@ -454,7 +457,19 @@
 						  	<div style="margin: auto; text-align: center; font-size: 140%; color: #48494A; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 500; margin: 20px;">
 						  		Este é seu código promocional:
 						  	</div>
-						  	<div id="ticket-code" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
+						  	<div id="ticket-code1" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
+						  		0000000000
+						  	</div>
+						  	<div id="ticket-code2" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
+						  		0000000000
+						  	</div>
+						  	<div id="ticket-code3" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
+						  		0000000000
+						  	</div>
+						  	<div id="ticket-code4" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
+						  		0000000000
+						  	</div>
+						  	<div id="ticket-code5" style="margin: auto; text-align: center; font-size: 200%; color: #cc2127; font-family: 'Roboto','Helvetica','Arial',sans-serif; font-weight: 900; margin: 25px; letter-spacing: 2px;">
 						  		0000000000
 						  	</div>
 						  	<br>
@@ -695,7 +710,47 @@
 		        	error_block();
 		        	flag = true;
 		        } else {
-		        	$("#ticket-code").text(result);
+		        	tickets = result.split("&");
+		        	tickets.pop();
+		        	console.log(result);
+		        	console.log(tickets);
+		        	console.log(tickets.length)
+		        	if (tickets.length == 1) {
+		        		$('#singuler-plural-title').text('Este é seu código promocional:');
+		        		$("#ticket-code1").text(tickets[0]);
+		        		$("#ticket-code2").css('display', 'none');
+		        		$("#ticket-code3").css('display', 'none');
+		        		$("#ticket-code4").css('display', 'none');
+		        		$("#ticket-code5").css('display', 'none');
+		        	}
+		        	if (tickets.length == 2) {	
+		        		$("#ticket-code1").text(tickets[0]);
+		        		$("#ticket-code2").text(tickets[1]);
+		        		$("#ticket-code3").css('display', 'none');
+		        		$("#ticket-code4").css('display', 'none');
+		        		$("#ticket-code5").css('display', 'none');
+		        	}
+		        	if (tickets.length == 3) {	
+		        		$("#ticket-code1").text(tickets[0]);
+		        		$("#ticket-code2").text(tickets[1]);
+		        		$("#ticket-code3").text(tickets[2]);
+		        		$("#ticket-code4").css('display', 'none');
+		        		$("#ticket-code5").css('display', 'none');
+		        	}
+		        	if (tickets.length == 4) {	
+		        		$("#ticket-code1").text(tickets[0]);
+		        		$("#ticket-code2").text(tickets[1]);
+		        		$("#ticket-code3").text(tickets[2]);
+		        		$("#ticket-code4").text(tickets[3]);
+		        		$("#ticket-code5").css('display', 'none');
+		        	}
+		        	if (tickets.length == 5) {	
+		        		$("#ticket-code1").text(tickets[0]);
+		        		$("#ticket-code2").text(tickets[1]);
+		        		$("#ticket-code3").text(tickets[2]);
+		        		$("#ticket-code4").text(tickets[3]);
+		        		$("#ticket-code5").text(tickets[4]);
+		        	}
 		        	result_block();
 		        	flag = true;
 		        }
